@@ -1,0 +1,54 @@
+.menu_task_target{
+    float:right;
+}
+
+.menu_task_target > ul{
+    text-align:right;
+    > li{
+        text-align:left;
+        display:inline-block;
+        width:12em;
+        border-left:.1rem solid $blue_light;
+        position:relative;
+        > a,
+        > span{
+            cursor:pointer;
+            display:block;
+            width:100%;
+            padding:.5em;
+        }
+        &:hover > a,
+        &:hover > span{
+            background:$blue_light;
+        }
+    }
+}
+
+.menu_task_target li ul{
+    position:absolute;
+    top:100%;
+    left:0;
+}
+
+.menu_task_target li > ul{
+    display:none;
+}
+
+.menu_task_target li:hover ul{
+    display:block;
+    width:100%;
+    background:$blue_mid;
+}
+
+.menu_task_target li ul li{
+    display:block;
+    a,
+    span{
+        display:block;
+        padding:.5em;
+    }
+    &:hover a,
+    &:hover span{
+        background:$blue_light;
+    }
+}
